@@ -1,0 +1,6 @@
+C:\Users\U190702\source\repos\LabIdentity\IdentityIsolation\Identity.Entities\bin\Debug\Identity.Domain.dll
+C:\Users\U190702\source\repos\LabIdentity\IdentityIsolation\Identity.Entities\bin\Debug\Identity.Domain.pdb
+C:\Users\U190702\source\repos\LabIdentity\IdentityIsolation\Identity.Entities\obj\Debug\Identity.Domain.csproj.CoreCompileInputs.cache
+C:\Users\U190702\source\repos\LabIdentity\IdentityIsolation\Identity.Entities\obj\Debug\Identity.Domain.dll
+C:\Users\U190702\source\repos\LabIdentity\IdentityIsolation\Identity.Entities\obj\Debug\Identity.Domain.pdb
+C:\Users\U190702\source\repos\LabIdentity\IdentityIsolation\Identity.Entities\obj\Debug\Identity.Domain.csprojAssemblyReference.cache

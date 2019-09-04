@@ -1,93 +1,105 @@
-﻿using Portal.Domain.Interface.Repository;
+﻿using Portal.Business;
+using Portal.Domain.Entities;
+using System.Net;
 using System.Web.Mvc;
 
 namespace EP.IdentityIsolation.MVC.Controllers
 {
+    [Authorize]
     public class OperadorasController : Controller
     {
-        private readonly IOperadoraRepository _operadoraRepository;
-        public OperadorasController(IOperadoraRepository operadoraRepository)
+        private OperadoraBussiness _operadoraBussiness;
+
+        public OperadorasController()
         {
-            _operadoraRepository = operadoraRepository;
+            _operadoraBussiness = new OperadoraBussiness();
         }
 
-        // GET: Operadoras
         public ActionResult Index()
         {
-            var operadoras = _operadoraRepository.ObterTodos();
-            return View(operadoras);
+            return View(_operadoraBussiness.GetOperadoras());
         }
 
-        // GET: Operadoras/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Operadora operadora = _operadoraBussiness.Get(id);
+            if (operadora == null)
+            {
+                return HttpNotFound();
+            }
+            return View(operadora);
         }
 
-        // GET: Operadoras/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Operadoras/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "OperadoraID,Nome,Descricao,ImagemID,TipoOperadoraID")] Operadora operadora)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
+                _operadoraBussiness.AdicionarOperadora(operadora);
                 return RedirectToAction("Index");
             }
-            catch
+
+            return View(operadora);
+        }
+
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
             {
-                return View();
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-        }
-
-        // GET: Operadoras/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Operadoras/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
+            Operadora operadora = _operadoraBussiness.Get(id);
+            if (operadora == null)
             {
-                // TODO: Add update logic here
+                return HttpNotFound();
+            }
+            return View(operadora);
+        }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Operadora operadora)
+        {
+            if (ModelState.IsValid)
+            {
+                _operadoraBussiness.AlterarOperadora(operadora);
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(operadora);
         }
 
-        // GET: Operadoras/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Operadora operadora = _operadoraBussiness.Get(id);
+            if (operadora == null)
+            {
+                return HttpNotFound();
+            }
+            return View(operadora);
         }
 
-        // POST: Operadoras/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
         {
-            try
-            {
-                // TODO: Add delete logic here
+            _operadoraBussiness.DeleteOperadora(id);
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("Index");
         }
+
     }
 }

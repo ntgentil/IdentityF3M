@@ -1,11 +1,11 @@
-﻿using Portal.Domain.Interface.Repository;
-using Portal.Infra.CrossCutting.Identity.Configuration;
+﻿using Portal.Infra.CrossCutting.Identity.Configuration;
 using Portal.Infra.CrossCutting.Identity.Context;
 using Portal.Infra.CrossCutting.Identity.Model;
 using Portal.Infra.Data.Repository;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using SimpleInjector;
+using Identity.Domain;
 
 namespace Portal.Infra.CrossCutting.IoC
 {
@@ -23,7 +23,6 @@ namespace Portal.Infra.CrossCutting.IoC
             container.Register<ApplicationSignInManager>(Lifestyle.Scoped);
 
             container.Register<IUsuarioRepository, UsuarioRepository>(Lifestyle.Scoped);
-            container.Register<IOperadoraRepository, OperadoraRepository>(Lifestyle.Scoped);
         } 
     }
 }

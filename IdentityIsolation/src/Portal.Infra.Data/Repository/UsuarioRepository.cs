@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Portal.Domain.Entities;
-using Portal.Domain.Interface.Repository;
 using Portal.Infra.Data.Context;
-
+using Identity.Domain;
 namespace Portal.Infra.Data.Repository
 {
     public class UsuarioRepository : IUsuarioRepository

@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using Portal.Domain.Entities;
+using Identity.Domain;
 
 namespace Portal.Infra.Data.EntityConfig
 {

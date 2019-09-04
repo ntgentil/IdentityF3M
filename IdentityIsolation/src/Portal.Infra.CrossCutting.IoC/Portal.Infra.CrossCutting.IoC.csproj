@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Portal.Infra.CrossCutting.IoC</RootNamespace>
     <AssemblyName>Portal.Infra.CrossCutting.IoC</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -66,9 +67,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Portal.Domain\Portal.Domain.csproj">
-      <Project>{659259FE-26B5-4868-935C-B4A08BCDD924}</Project>
-      <Name>Portal.Domain</Name>
+    <ProjectReference Include="..\..\Identity.Entities\Identity.Domain.csproj">
+      <Project>{ddcb6c70-3e75-446a-b45b-cd7abbc12808}</Project>
+      <Name>Identity.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\Portal.Infra.CrossCutting.Identity\Portal.Infra.CrossCutting.Identity.csproj">
       <Project>{9062B1C5-F32D-435E-93B2-2E7F6268B2A1}</Project>

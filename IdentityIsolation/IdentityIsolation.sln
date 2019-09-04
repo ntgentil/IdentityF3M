@@ -7,11 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Pre
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{499A6D70-99FE-418E-BCBB-D9B260C3E642}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{4F8867E2-4521-4E1C-B57F-333FFBB09402}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - IdentityAutentication", "4 - IdentityAutentication", "{4F8867E2-4521-4E1C-B57F-333FFBB09402}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 - Data", "3.1 - Data", "{A7D2FB6D-E397-4846-8E93-715AA638AE6F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - Data", "4.2 - Data", "{A7D2FB6D-E397-4846-8E93-715AA638AE6F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2 - CrossCutting", "3.2 - CrossCutting", "{7D1C6E18-9267-4800-9708-1B7627A72AA2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.3 - CrossCutting", "4.3 - CrossCutting", "{7D1C6E18-9267-4800-9708-1B7627A72AA2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal.Infra.CrossCutting.Identity", "src\Portal.Infra.CrossCutting.Identity\Portal.Infra.CrossCutting.Identity.csproj", "{9062B1C5-F32D-435E-93B2-2E7F6268B2A1}"
 EndProject
@@ -26,6 +26,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Business", "3 - Business", "{0CC67A3B-1515-4624-8A48-3E92F06964DD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal.Business", "Portal.Business\Portal.Business.csproj", "{F908DDF2-7030-4E39-98DF-317114F6F19B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Domain", "4.1 - Domain", "{BC112CC8-02C3-4AC8-8DFD-0E7A936AC519}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Domain", "Identity.Entities\Identity.Domain.csproj", "{DDCB6C70-3E75-446A-B45B-CD7ABBC12808}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,10 @@ Global
 		{F908DDF2-7030-4E39-98DF-317114F6F19B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F908DDF2-7030-4E39-98DF-317114F6F19B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F908DDF2-7030-4E39-98DF-317114F6F19B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDCB6C70-3E75-446A-B45B-CD7ABBC12808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDCB6C70-3E75-446A-B45B-CD7ABBC12808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDCB6C70-3E75-446A-B45B-CD7ABBC12808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDCB6C70-3E75-446A-B45B-CD7ABBC12808}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +78,8 @@ Global
 		{659259FE-26B5-4868-935C-B4A08BCDD924} = {499A6D70-99FE-418E-BCBB-D9B260C3E642}
 		{7452498E-395C-4BEC-87AF-1B2B3AA8BD10} = {A7D2FB6D-E397-4846-8E93-715AA638AE6F}
 		{F908DDF2-7030-4E39-98DF-317114F6F19B} = {0CC67A3B-1515-4624-8A48-3E92F06964DD}
+		{BC112CC8-02C3-4AC8-8DFD-0E7A936AC519} = {4F8867E2-4521-4E1C-B57F-333FFBB09402}
+		{DDCB6C70-3E75-446A-B45B-CD7ABBC12808} = {BC112CC8-02C3-4AC8-8DFD-0E7A936AC519}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0DD252B3-872D-403F-A945-56A06818D1DD}

@@ -1,5 +1,4 @@
-﻿using Portal.Domain.Repository.Interfaces;
-using Portal.Infra.Data.Context;
+﻿using Identity.Domain.Repository;
 using System;
 using System.Data.Entity;
 using System.Linq;

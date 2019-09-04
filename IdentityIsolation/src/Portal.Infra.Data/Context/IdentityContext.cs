@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity;
-using Portal.Domain.Entities;
+using Identity.Domain;
 using Portal.Infra.Data.EntityConfig;
 
 namespace Portal.Infra.Data.Context
@@ -7,7 +7,7 @@ namespace Portal.Infra.Data.Context
     public class IdentityContext : DbContext
     {
         public IdentityContext()
-            : base("IdentityConnection")
+            : base("DefaultConnection")
         {
             
         }
