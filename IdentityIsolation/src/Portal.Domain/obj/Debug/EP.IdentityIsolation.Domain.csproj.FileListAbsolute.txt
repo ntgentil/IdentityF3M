@@ -1,0 +1,5 @@
+C:\Users\U190702\source\repos\IdentityIsolation-master\IdentityIsolation-master\src\EP.IdentityIsolation.Domain\bin\Debug\EP.IdentityIsolation.Domain.dll
+C:\Users\U190702\source\repos\IdentityIsolation-master\IdentityIsolation-master\src\EP.IdentityIsolation.Domain\bin\Debug\EP.IdentityIsolation.Domain.pdb
+C:\Users\U190702\source\repos\IdentityIsolation-master\IdentityIsolation-master\src\EP.IdentityIsolation.Domain\obj\Debug\EP.IdentityIsolation.Domain.csproj.CoreCompileInputs.cache
+C:\Users\U190702\source\repos\IdentityIsolation-master\IdentityIsolation-master\src\EP.IdentityIsolation.Domain\obj\Debug\EP.IdentityIsolation.Domain.dll
+C:\Users\U190702\source\repos\IdentityIsolation-master\IdentityIsolation-master\src\EP.IdentityIsolation.Domain\obj\Debug\EP.IdentityIsolation.Domain.pdb
